@@ -95,6 +95,7 @@ public class ClientController {
 	
 	@RequestMapping(value = "/clients/new",method=RequestMethod.GET)
 	public String newDealer(Model model){
+		//创建经销商
 		List<StrengthDic> strengthDics = dicService.getStrengthDics();
 		List<ReputationDic> reputationDics = dicService.getReputationDics();
 		List<ShopTypeDic> shopTypeDics = dicService.getShopTypeDics();
