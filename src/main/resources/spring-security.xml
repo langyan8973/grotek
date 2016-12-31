@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:beans="http://www.springframework.org/schema/beans" xmlns="http://www.springframework.org/schema/security"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/security
+		http://www.springframework.org/schema/security/spring-security.xsd">
+
+	<http pattern="/assets/**" security="none" />
+	<http pattern="/rest/**" security="none" />
+	<http pattern="/apps/**" security="none" />
+	<http pattern="/view/**" security="none" />
+	<http pattern="/index" security="none" />
+	<http pattern="/test" security="none" />
+	
+	<http pattern="/work/**" auto-config="true" use-expressions="true"
+		authentication-manager-ref="workAuthenticationManager">
+		<intercept-url pattern="/" access="permitAll" />
+		<intercept-url pattern="/wlogin/*" access="permitAll" />
+		<intercept-url pattern="/wlogout" access="permitAll" />
+		<intercept-url pattern="/**" access="hasRole('WORK')" />
+		<access-denied-handler error-page="/work/403" />
+		<form-login login-page="/wlogin/form" login-processing-url="/work/j_spring_security_check"
+			username-parameter="username" password-parameter="password"
+			authentication-failure-url="/wlogin/form?error" default-target-url="/work/timesheet/index" />
+		<logout logout-url="/work/j_spring_security_logout"
+			logout-success-url="/wlogin/form?logout" />
+		<remember-me key="grotekwork" token-validity-seconds="86400"
+			user-service-ref="workDetailsService" />
+	</http>
+	
+	<http pattern="/manager/**" auto-config="true" use-expressions="true"
+		authentication-manager-ref="adminAuthenticationManager">
+		<intercept-url pattern="/" access="permitAll" />
+		<intercept-url pattern="/login/*" access="permitAll" />
+		<intercept-url pattern="/logout" access="permitAll" />
+		<!-- <intercept-url pattern="/**" access="hasAnyRole('ADMIN','COST','REVIEW','DELIVER','DATA')" /> -->
+		<intercept-url pattern="/manager/sendapplies/**" access="hasAnyRole('ADMIN','DELIVER')" />
+		<intercept-url pattern="/manager/workload/**" access="hasAnyRole('ADMIN','REVIEW')" />
+		<intercept-url pattern="/manager/aexsforms/**" access="hasAnyRole('COST')" />
+		<intercept-url pattern="/manager/atravels/**" access="hasAnyRole('COST')" />
+		<intercept-url pattern="/manager/exsforms/**" access="hasAnyRole('ADMIN','REVIEW')" />
+		<intercept-url pattern="/manager/travels/**" access="hasAnyRole('ADMIN','REVIEW')" />
+		<intercept-url pattern="/**" access="hasAnyRole('ADMIN','COST','REVIEW','DELIVER','DATA')" />
+
+		<access-denied-handler error-page="/403" />
+		<form-login login-page="/login/form" login-processing-url="/manager/j_spring_security_check"
+			username-parameter="username" password-parameter="password"
+			authentication-failure-url="/login/form?error" default-target-url="/manager/welcome" />
+		<logout logout-url="/manager/j_spring_security_logout"
+			logout-success-url="/login/form?logout" />
+		<remember-me key="grotekadmin" token-validity-seconds="86400"
+			user-service-ref="adminDetailsService" />
+	</http>
+	
+	<authentication-manager id="workAuthenticationManager">
+		<authentication-provider ref="workAuthenticationProvider" />
+	</authentication-manager>
+
+	<beans:bean id="workAuthenticationProvider"
+		class="org.springframework.security.authentication.dao.DaoAuthenticationProvider">
+		<beans:property name="userDetailsService" ref="workDetailsService" />
+		<beans:property name="hideUserNotFoundExceptions"
+			value="false" />
+	</beans:bean>
+	
+	<authentication-manager id="adminAuthenticationManager">
+		<authentication-provider ref="adminAuthenticationProvider" />
+	</authentication-manager>
+
+	<beans:bean id="adminAuthenticationProvider"
+		class="org.springframework.security.authentication.dao.DaoAuthenticationProvider">
+		<beans:property name="userDetailsService" ref="adminDetailsService" />
+		<beans:property name="hideUserNotFoundExceptions"
+			value="false" />
+	</beans:bean>
+
+	<beans:bean id="messageSource"
+		class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+		<beans:property name="basename" value="classpath:messages_zh_CN" />
+	</beans:bean>
+</beans:beans>

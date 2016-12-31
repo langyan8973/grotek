@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration >
+  <classPathEntry  location="/Users/liuyan/Documents/apache-tomcat-7.0.23/webapps/wcp/WEB-INF/lib/mysql-connector-java-5.1.25.jar"/> 
+  <context id="context1" >
+    <jdbcConnection driverClass="com.mysql.jdbc.Driver" 
+        connectionURL="jdbc:mysql://127.0.0.1:3306/grotek?useUnicode=true&amp;characterEncoding=UTF-8" userId="root" password="root" />
+    <javaModelGenerator targetPackage="com.grotek.pojo" targetProject="grotek/src/main/java" />
+    <sqlMapGenerator targetPackage="com.grotek.mapping" targetProject="grotek/src/main/java" />
+    <javaClientGenerator targetPackage="com.grotek.dao" targetProject="grotek/src/main/java" type="XMLMAPPER" />
+    <table schema="grotek" tableName="role"  
+         domainObjectName="Role" enableInsert="true"  
+         enableSelectByPrimaryKey="true" enableUpdateByPrimaryKey="true"  
+         enableDeleteByPrimaryKey="true" enableSelectByExample="false"  
+         enableDeleteByExample="false" enableCountByExample="false"  
+         enableUpdateByExample="false">  
+     </table> 
+  </context>
+</generatorConfiguration>

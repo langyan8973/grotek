@@ -1,0 +1,254 @@
+.bs-docs-baseinfo {
+    position: relative;
+    margin: 1px 30px 0 20px;
+    padding: 39px 19px 14px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    width:90%;
+}
+
+.bs-docs-baseinfo:after {
+    content: "基本信息";
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    padding: 3px 7px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    color: #9da0a4;
+    -webkit-border-radius: 4px 0 4px 0;
+    -moz-border-radius: 4px 0 4px 0;
+    border-radius: 4px 0 4px 0;
+}
+
+.bs-docs-setting {
+    position: relative;
+    margin: 30px 30px 0 20px;
+    padding: 39px 19px 14px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    width:90%;
+}
+
+.bs-docs-setting:after {
+    content: "设置";
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    padding: 3px 7px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    color: #9da0a4;
+    -webkit-border-radius: 4px 0 4px 0;
+    -moz-border-radius: 4px 0 4px 0;
+    border-radius: 4px 0 4px 0;
+}
+
+.bs-docs-convert {
+    position: relative;
+    margin: 30px 30px 0 20px;
+    padding: 39px 19px 14px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    width:90%;
+}
+
+.bs-docs-convert:after {
+    content: "卷膜包材转换";
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    padding: 3px 7px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    color: #9da0a4;
+    -webkit-border-radius: 4px 0 4px 0;
+    -moz-border-radius: 4px 0 4px 0;
+    border-radius: 4px 0 4px 0;
+}
+
+.bs-docs-price {
+    position: relative;
+    margin: 30px 30px 0 20px;
+    padding: 39px 19px 14px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    width:90%;
+}
+
+.bs-docs-price:after {
+    content: "价格信息";
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    padding: 3px 7px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    color: #9da0a4;
+    -webkit-border-radius: 4px 0 4px 0;
+    -moz-border-radius: 4px 0 4px 0;
+    border-radius: 4px 0 4px 0;
+}
+
+.bs-docs-labor {
+    position: relative;
+    margin: 30px 30px 0 20px;
+    padding: 39px 19px 14px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    width:90%;
+}
+
+.bs-docs-labor:after {
+    content: "生产用工";
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    padding: 3px 7px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    color: #9da0a4;
+    -webkit-border-radius: 4px 0 4px 0;
+    -moz-border-radius: 4px 0 4px 0;
+    border-radius: 4px 0 4px 0;
+}
+
+.bs-docs-operate {
+    position: relative;
+    margin: 30px 30px 0 20px;
+    padding: 39px 19px 14px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    width:90%;
+}
+
+.bs-docs-operate:after {
+    content: "经营情况";
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    padding: 3px 7px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    color: #9da0a4;
+    -webkit-border-radius: 4px 0 4px 0;
+    -moz-border-radius: 4px 0 4px 0;
+    border-radius: 4px 0 4px 0;
+}
+
+.bs-docs-goal {
+    position: relative;
+    margin: 30px 30px 0 20px;
+    padding: 39px 19px 14px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    width:90%;
+}
+
+.bs-docs-goal:after {
+    content: "基本任务";
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    padding: 3px 7px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    color: #9da0a4;
+    -webkit-border-radius: 4px 0 4px 0;
+    -moz-border-radius: 4px 0 4px 0;
+    border-radius: 4px 0 4px 0;
+}
+
+.infolist-inline {
+  padding-left: 0;
+  list-style:circle;
+}
+
+.infolist-inline > li {
+  display: inline-block;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.infolist-inline > li:first-child {
+  padding-left: 0;
+}
+
+.baseinfolist {
+  padding-left: 50;
+  list-style:none;
+}
+
+.baseinfolist > li {
+  display: block;
+  padding-right: 5px;
+  padding-left: 50px;
+}
+
+.baseinfolist > li:first-child {
+  padding-left: 50;
+}
+
+.workcontent {
+    min-width: 400px;
+    min-height: 620px;
+    margin-bottom: 100px;
+    padding-bottom: 50px;
+    overflow: hidden;
+    position: relative;
+    background: #fff;
+    border-left: 1px solid #dae3e9;
+    border-bottom: 1px solid #dae3e9;
+    box-shadow: -3px 3px 3px -2px #f1f1f3;
+    border-radius: 0px 0px 0px 5px;
+}
+.mininput{
+	width:30px;
+}
+
+.tdweek{
+	width:50px;
+}
+
+.chart-legend li span{
+	list-style:none;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: 5px;
+}
