@@ -198,7 +198,7 @@
 					$("#legend2").append(html);
 					sum2+=value.value;
 				});
-				$("#sum2").html('总计：'+sum2+"元");
+				$("#sum2").html('总计：'+sum2.toFixed(1)+"元");
 				$("#tablebody").html('');
 				$('#title3').html('为经销商工作详细信息');
 				var body=$("#tablebody");

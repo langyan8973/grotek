@@ -75,24 +75,7 @@
             	</c:if>    
             	
             </div>
-            <div class="row-fluid profile">
-            	<h4 id="title1" style="margin-left:100px;"></h4>
-            </div>
-            <div class="row-fluid profile">
-            	<div id="canvas-holder" style="text-align:center;">
-					<canvas id="chart-area" width="1000" height="500" />
-				</div>
-            </div>
-            <div class="row-fluid profile">
-            	<h4 id="title2" style="margin-left:100px;"></h4>
-            </div>
-            <div class="row-fluid profile">
-            	<div id="canvas-holder1" style="text-align:center;">
-					<canvas id="chart-area1" width="1000" height="500" />
-				</div>
-            </div>
-            <h4 id="title3" style="margin-bottom:30px;margin-top:30px;"></h4>
-            <div class="row-fluid table">
+              <div class="row-fluid table">
             	<table class="table table-bordered">
                     <thead>
                         <tr>
@@ -111,6 +94,24 @@
                     </tbody>
                 </table>
             </div>
+            <div class="row-fluid profile">
+            	<h4 id="title1" style="margin-left:100px;"></h4>
+            </div>
+            <div class="row-fluid profile">
+            	<div id="canvas-holder" style="text-align:center;">
+					<canvas id="chart-area" width="1000" height="500" />
+				</div>
+            </div>
+            <div class="row-fluid profile">
+            	<h4 id="title2" style="margin-left:100px;"></h4>
+            </div>
+            <div class="row-fluid profile">
+            	<div id="canvas-holder1" style="text-align:center;">
+					<canvas id="chart-area1" width="1000" height="500" />
+				</div>
+            </div>
+            <h4 id="title3" style="margin-bottom:30px;margin-top:30px;"></h4>
+          
         </div>
     </div>
     

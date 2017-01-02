@@ -88,7 +88,7 @@
 		                        </ul>
 		                        <c:if test="${dealer.pname!=null }">
 		                        	<ul class="infolist-inline">                          
-			                            <li>收款单位：${dealer.pname }</li>
+			                            <li>接收单位：${dealer.pname }</li>
 			                            <li>地址：${dealer.paddress } </li>
 			                            <li>联系人：${dealer.pcontact } </li>
 			                            <li>联系电话：${dealer.pphone } </li>
