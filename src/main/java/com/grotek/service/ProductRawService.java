@@ -13,9 +13,15 @@ public interface ProductRawService {
 
 	public List<ProductRaw> findProductRaws(String text,PageRequest pageable);
 	
+	//LWX findProductKcun
+	public List<ProductRaw_Store> findProductKcun(String text,PageRequest pageable);
+	
 	public List<ProductRaw> getProductRaws(PageRequest pageable);
 	
 	public int searchCount(String text);
+	
+	//LWX
+	public int searchkuncCount(String text);
 	
 	public int allCount();
 

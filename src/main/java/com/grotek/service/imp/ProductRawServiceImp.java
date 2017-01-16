@@ -243,4 +243,17 @@ public class ProductRawServiceImp implements ProductRawService {
 		return productRaw_OutDao.insert(out);
 	}
 
+	@Override
+	public List<ProductRaw_Store> findProductKcun(String text, PageRequest pageable) {
+		
+		return productRaw_StoreDao.findProductKcun(text, pageable);
+	}
+
+	@Override
+	public int searchkuncCount(String text) {
+		// TODO Auto-generated method stub
+		return productRaw_StoreDao.searchCount(text);
+	}
+
+
 }
