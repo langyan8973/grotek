@@ -310,6 +310,18 @@ public class ProductPageServiceImp implements ProductPageService {
 		return pageNotes;
 	}
 
+	@Override
+	public List<ProductPage_Store> findProductKcun(String text, PageRequest pageable) {
+		// TODO Auto-generated method stub
+		return storeDao.findProductKcun(text, pageable);
+	}
+
+	@Override
+	public int searchkuncCount(String text) {
+		// TODO Auto-generated method stub
+		return storeDao.searchCount(text);
+	}
+
 	
 
 }

@@ -349,4 +349,16 @@ public class ProductPackServiceImp implements ProductPackService {
 		return packNotes;
 	}
 
-}
+	@Override
+	public List<ProductPack_Store> findProductKcun(String text, PageRequest pageable) {
+			
+			return storeDao.findProductKcun(text, pageable);
+		}
+
+	@Override
+	public int searchkuncCount(String text) {
+		return storeDao.searchCount(text);
+	}
+	}
+
+

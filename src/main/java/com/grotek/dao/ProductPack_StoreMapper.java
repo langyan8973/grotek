@@ -2,10 +2,10 @@ package com.grotek.dao;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.Param;
 import org.springframework.data.domain.PageRequest;
 
 import com.grotek.pojo.ProductPack_Store;
-import com.grotek.pojo.ProductRaw_Store;
 
 public interface ProductPack_StoreMapper {
     /**
@@ -61,4 +61,9 @@ public interface ProductPack_StoreMapper {
     int allCount();
     
     ProductPack_Store getByPid(int pid);
+    
+    //findProductKcun
+    List<ProductPack_Store> findProductKcun(@Param("key")String key,@Param("pageable")PageRequest pageable);
+    
+    int searchCount(String key);
 }

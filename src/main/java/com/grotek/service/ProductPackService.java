@@ -67,9 +67,15 @@ public interface ProductPackService {
 	public int editReferencePackWeight(ReferencePackWeight referencePackWeight);
 	
 	
+	//LWX
+	public List<ProductPack_Store> findProductKcun(String text,PageRequest pageable);
+	
 	public List<ProductPack_Store> getStores(PageRequest pageable);
 	
 	public int storesAllCount();
+	
+	//LWX
+	public int searchkuncCount(String text);
 	
 	public ProductPack_Store getStoreByPid(int pid);
 	

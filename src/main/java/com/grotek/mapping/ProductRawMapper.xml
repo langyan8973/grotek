@@ -49,6 +49,7 @@
 	</if>  
   </select>
   
+
   <select id="getProductRaws" resultMap="BaseResultMap">
     select 
     t.*,
@@ -66,6 +67,8 @@
     from productrawinfo 
     where name like "%"#{key,jdbcType=VARCHAR}"%"  and status=0
   </select>
+  
+  
   
   <select id="allCount" resultType="int">    
     select 

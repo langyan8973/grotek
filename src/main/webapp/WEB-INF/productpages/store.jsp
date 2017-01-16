@@ -29,6 +29,10 @@
             <div id="pad-wrapper" class="users-list">
                 <div class="row-fluid header">
                     <h3>宣传品库存</h3>
+                    <div class="span10 pull-right">
+                        <input id="searchtext" type="text" class="span5 search" placeholder="输入宣传品名称"  onkeydown="onKeyDown(event)"/>
+                        <button id="locationBtn" class="btn-flat default" type="button" onclick="search()">查找</button>
+                    </div>
                 </div>
 				<c:if test="${success != null}">
 					<div class="alert alert-success" id="successMessage">
@@ -85,7 +89,9 @@
     
 <script type="text/javascript">
 $(document).ready(function() {
-	 
+	addProductPageFormValidate();
+	$("#searchtext").val(getUrlParam("context")); 
+	
     var size = 10;
 	var sumcount = parseInt(${sumcount}); 
 	if(sumcount ==0){return false}
@@ -108,12 +114,16 @@ $(document).ready(function() {
 		//链接尾部
 		hrefLatter : '',
 		getLink : function(n){
+			var text = $("#searchtext").val();
 			return this.hrefFormer + "?page=" + (n-1) + "&size=" + size;
 		}
 		
 	});
 });
-
+function search(){
+	var text = $("#searchtext").val();
+		window.location.href = '<c:url value="store" />?context='+encodeURIComponent(text);
+}
 </script>
 
 <jsp:include page="../includes/footer.jsp" />

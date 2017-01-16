@@ -7,6 +7,7 @@ import org.springframework.data.domain.PageRequest;
 
 import com.grotek.pojo.Employee;
 import com.grotek.pojo.ProductRaw;
+import com.grotek.pojo.ProductRaw_Store;
 
 public interface ProductRawMapper {
     /**
@@ -58,6 +59,8 @@ public interface ProductRawMapper {
     int updateByPrimaryKey(ProductRaw record);
     
     List<ProductRaw> findProductRaws(@Param("key")String key,@Param("pageable")PageRequest pageable);
+    
+   
     
     List<ProductRaw> getProductRaws(PageRequest pageable);
     

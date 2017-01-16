@@ -334,13 +334,18 @@ public class ProductBoxController {
 	}
 	
 	@RequestMapping(value = "/productboxes/store",method=RequestMethod.GET)
-	public String stores(Model model,
+	public String stores(Model model, @RequestParam(required = false) String context,
 			@RequestParam(required = false, defaultValue = "0") int page,
 			@RequestParam(required = false, defaultValue = "10") int size){
 		List<ProductBox_Store> stores = null;
 		int sumcount = 0;
+		if (StringUtils.isNotBlank(context)) {
+			stores = boxService.findProductKcun(context, new PageRequest(page,size));
+			sumcount = boxService.searchkuncCount(context);
+ 		} else {
 		stores = boxService.getStores(new PageRequest(page, size));
 		sumcount = boxService.storesAllCount();
+ 		}
 		model.addAttribute("stores", stores);
 		model.addAttribute("sumcount", sumcount);
 		return "productboxes/store";

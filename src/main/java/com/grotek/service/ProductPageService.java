@@ -49,7 +49,13 @@ public interface ProductPageService {
 	
 	public List<ProductPage_Store> getStores(PageRequest pageable);
 	
+	//LWX
+	public List<ProductPage_Store> findProductKcun(String text,PageRequest pageable);
+	
 	public int storesAllCount();
+	
+	//LWX 
+	public int searchkuncCount(String text);
 	
 	public ProductPage_Store getStoreByPid(int pid);
 	

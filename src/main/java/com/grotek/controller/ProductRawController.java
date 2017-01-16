@@ -51,6 +51,7 @@ public class ProductRawController {
 		if (StringUtils.isNotBlank(context)) {
 			productraws = productRawService.findProductRaws(context, new PageRequest(page,size));
 			sumcount = productRawService.searchCount(context);
+			System.out.println(context);
 		} else {
 			productraws = productRawService.getProductRaws(new PageRequest(page, size));
 			sumcount = productRawService.allCount();
@@ -241,17 +242,23 @@ public class ProductRawController {
 	}
 	
 	@RequestMapping(value = "/productraws/store",method=RequestMethod.GET)
-	public String stores(Model model,
+	public String stores(Model model, @RequestParam(required = false) String context,
 			@RequestParam(required = false, defaultValue = "0") int page,
 			@RequestParam(required = false, defaultValue = "10") int size){
 		List<ProductRaw_Store> stores = null;
 		int sumcount = 0;
+		if (StringUtils.isNotBlank(context)) {
+			stores = productRawService.findProductKcun(context, new PageRequest(page,size));
+			sumcount = productRawService.searchkuncCount(context);
+ 		} else {
 		stores = productRawService.getStores(new PageRequest(page, size));
 		sumcount = productRawService.storesAllCount();
+		}
 		model.addAttribute("stores", stores);
 		model.addAttribute("sumcount", sumcount);
 		return "productraws/store";
 	}
+	
 	
 	@RequestMapping(value = "/productraws/in",method=RequestMethod.GET)
 	public String productrawin(Model model,@RequestParam(required = false) String context,
